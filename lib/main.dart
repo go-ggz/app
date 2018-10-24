@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
 void main() => runApp(new MyApp());
 
@@ -6,6 +7,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final wordPair = WordPair.random();
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
@@ -24,7 +26,8 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to ggz'),
         ),
         body: Center(
-          child: Text('Hello World'),
+          //child: Text('Hello World'), // Replace the highlighted text...
+          child: Text(wordPair.asPascalCase), // With this highlighted text.
         ),
       ),
     );
